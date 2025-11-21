@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phishguard"
+version = "1.0.0"
+description = "A phishing detection tool with ML + GUI"
+authors = [
+    { name="Techie Interns", email="techieiinterns@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "joblib",
+    "pillow",
+    "tk",
+]
+
+[tool.setuptools]
+packages = ["."]
