@@ -5,7 +5,7 @@ import numpy as np
 app = FastAPI()
 
 # Load your phishing model
-model = joblib.load("phishing_model.pkl")
+model = joblib.load("phishing_model_compressed.pkl")
 scaler = joblib.load("scaler.pkl")
 
 @app.get("/")
