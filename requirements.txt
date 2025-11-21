@@ -1,0 +1,13 @@
+pandas
+scikit-learn
+joblib
+requests
+python-whois
+tldextract
+Pillow
+numpy
+
+# Optional / dev: add these if you use DB drivers or testing tools
+# psycopg2-binary  # for Postgres
+# mysql-connector-python  # for MySQL
+# pytest
