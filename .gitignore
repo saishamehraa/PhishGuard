@@ -1,0 +1,90 @@
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+.venv/
+env/
+venv/
+
+# Jupyter + cache
+.ipynb_checkpoints/
+*.pickle
+*.pkl
+
+# ---------------------------
+# Machine Learning Artifacts
+# ---------------------------
+# Ignore heavy model files
+*.pkl
+*.h5
+*.joblib
+*.model
+*.bin
+
+# Model outputs
+*.npy
+*.npz
+
+# Dataset outputs
+*.csv
+!Dataset.csv
+!Phishing_Dataset.csv
+!cleaned_dataset.csv
+!dataset_fixed.csv
+
+backups/
+
+# ---------------------------
+# Logs
+# ---------------------------
+logs/
+*.log
+
+# ---------------------------
+# OS Files
+# ---------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# Git LFS (optional)
+# ---------------------------
+
+
+# ---------------------------
+# Visual Studio / .vs folder
+# ---------------------------
+.vs/
+*.vsidx
+*.suo
+*.user
+*.cache
+*.sln.docstates
+
+# ---------------------------
+# Build / Packaging
+# ---------------------------
+build/
+dist/
+*.spec
+
+# ---------------------------
+# Images (optional)
+# ---------------------------
+# comment out if you want them tracked
+# *.jpg
+# *.png
+# *.jpeg
+
+# ---------------------------
+# IDE Specific
+# ---------------------------
+.vscode/
+.idea/
+
