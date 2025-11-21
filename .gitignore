@@ -31,13 +31,9 @@ venv/
 *.npz
 
 # Dataset outputs
-*.csv
-!Dataset.csv
-!Phishing_Dataset.csv
-!cleaned_dataset.csv
-!dataset_fixed.csv
 
-backups/
+
+
 
 # ---------------------------
 # Logs
