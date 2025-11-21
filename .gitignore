@@ -14,14 +14,13 @@ venv/
 
 # Jupyter + cache
 .ipynb_checkpoints/
-*.pickle
-*.pkl
+
+
 
 # ---------------------------
 # Machine Learning Artifacts
 # ---------------------------
 # Ignore heavy model files
-*.pkl
 *.h5
 *.joblib
 *.model
