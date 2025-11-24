@@ -5,7 +5,7 @@
 ## Features
 - Interactive GUI chatbot for submitting URLs and receiving analysis (`main_gui.py`).
 - Heuristic checks (SSL, domain age, keyword scanning) in `phishing_check.py`.
-- ML-based prediction using a pre-trained model (`ml_model_runner.py`, `phishing_model.pkl`, `scaler.pkl`).
+- ML-based prediction using a pre-trained model (`ml_model_runner.py`, `phishing_model_compressed.pkl`, `scaler.pkl`).
 - Logging and feedback components to capture user interaction and results.
 
 ## Quick Start
@@ -44,7 +44,7 @@ python phishing_check.py
 # then enter a URL when prompted
 ```
 
-- Run the ML predictor directly (uses `phishing_model.pkl` and `scaler.pkl`):
+- Run the ML predictor directly (uses `phishing_model_compressed.pkl` and `scaler.pkl`):
 
 ```powershell
 python ml_model_runner.py
@@ -62,9 +62,9 @@ predict_with_ml_script("http://example.com")
 - `main_gui.py` — Tkinter GUI and frontend for user interaction.
 - `chatbot_logic.py` — Chatbot flow, intent handling and orchestration of checks.
 - `phishing_check.py` — Heuristic checks: SSL, domain age, keyword scanning, logging.
-- `ml_model_runner.py` — Feature extraction and ML model inference using `phishing_model.pkl` and `scaler.pkl`.
+- `ml_model_runner.py` — Feature extraction and ML model inference using `phishing_model_compressed.pkl` and `scaler.pkl`.
 - `ml_wrapper.py` — Small wrapper used to call the ML prediction from other modules.
-- `phishing_model.pkl`, `scaler.pkl` — Pre-trained model files (required for ML predictions).
+- `phishing_model_compressed.pkl`, `scaler.pkl` — Pre-trained model files (required for ML predictions).
 - `Dataset.csv`, `Phishing_Dataset.csv`, `cleaned_dataset.csv` — Local datasets found in the repo.
 - `logs/` — Directory where runtime logs are stored.
 - `utils.py`, `database.py`, `chatbot_logger.py`, `feedback_handler.py` — Helper modules for normalization, DB logging and feedback.
@@ -73,12 +73,12 @@ predict_with_ml_script("http://example.com")
 The project contains `database.py` and SQL usage in several modules. Configure the connection in `database.py` for your chosen backend. Depending on your DB (Postgres/MySQL), install the appropriate driver (e.g. `psycopg2-binary` or `mysql-connector-python`).
 
 ## Troubleshooting
-- If ML prediction fails, verify `phishing_model.pkl` and `scaler.pkl` are present in the project root and compatible with the installed `scikit-learn`.
+- If ML prediction fails, verify `phishing_model_compressed.pkl` and `scaler.pkl` are present in the project root and compatible with the installed `scikit-learn`.
 - SSL checks and WHOIS lookups can fail behind restrictive firewalls — those checks will gracefully fall back and log warnings.
 - If `tkinter` GUI doesn't start, confirm your Python distribution includes `tkinter`.
 
 ## Development
-- To retrain or update the ML model, prepare a training script that outputs `phishing_model.pkl` and `scaler.pkl` compatible with `ml_model_runner.py` feature order.
+- To retrain or update the ML model, prepare a training script that outputs `phishing_model_compressed.pkl` and `scaler.pkl` compatible with `ml_model_runner.py` feature order.
 - Add unit tests around feature extraction (`ml_model_runner.extract_features_from_url`) and `phishing_check.analyze_url` for regression coverage.
 
 ## Contributing

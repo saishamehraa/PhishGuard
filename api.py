@@ -1,12 +1,7 @@
 from fastapi import FastAPI
-import joblib
-import numpy as np
+from ml_model_runner import run_model_on_url
 
 app = FastAPI()
-
-# Load your phishing model
-model = joblib.load("phishing_model_compressed.pkl")
-scaler = joblib.load("scaler.pkl")
 
 @app.get("/")
 def home():
@@ -14,7 +9,8 @@ def home():
 
 @app.post("/predict")
 def predict(url: str):
-    # TODO: run your extraction logic here
-    # For now, just return placeholder
-    return {"prediction": "safe or phishing"}
-    # features = extract_features(url)
+    label, confidence = run_model_on_url(url)
+    return {
+        "prediction": label,
+        "confidence": confidence
+    }
