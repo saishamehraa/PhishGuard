@@ -6,7 +6,7 @@ from collections import Counter
 import pandas as pd
 
 # === Load model and scaler only once ===
-model = joblib.load("phishing_model_compressed_compressed.pkl")
+model = joblib.load("phishing_model_compressed.pkl")
 scaler = joblib.load("scaler.pkl")
 
 def shannon_entropy(string):
