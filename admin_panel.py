@@ -144,7 +144,7 @@ root.title("PhishGuard - Admin Panel")
 root.geometry("1300x800")
 
 # Background image
-bg_img = Image.open("bg(gui).jpg")
+bg_img = Image.open(resource_path("bg(gui).jpg"))
 bg_img = bg_img.resize((1300, 800), Image.LANCZOS)
 bg_photo = ImageTk.PhotoImage(bg_img)
 
